@@ -9,6 +9,8 @@ resource = 'characters'
 timestamp = time.time()
 public_key = '1aa848defd6e3980f0a4ddd5c01af610'
 secret_key = 'd119b3af5741101a8ce81a010be86cb7ca6e2ca8'
+
+# Ciframos las llaves
 access = f"{timestamp}{secret_key}{public_key}"
 ultra_secret = hashlib.md5(access.encode())
 
